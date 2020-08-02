@@ -9,6 +9,7 @@ use pocketmine\Player;
 use vyuziuk\EasyKits\Forms\CreateKitForm;
 use vyuziuk\EasyKits\i18n\LanguageFactory;
 use vyuziuk\EasyKits\KitManager;
+use vyuziuk\EasyKits\Main;
 
 /**
  * Class EasyKit
@@ -19,6 +20,10 @@ use vyuziuk\EasyKits\KitManager;
  * @since   1.0.0
  */
 class EasyKit extends Command{
+    public function __construct(string $name, string $description = "", string $usageMessage = null, array $aliases = []){
+        parent::__construct($name, $description, $usageMessage, $aliases);
+        $this->setPermission(Main::getInstance()->getConfig()->get("adminPermission"));
+    }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args){
         if(!$sender instanceof Player){

@@ -5,6 +5,9 @@ language: "en_us"
 # Право на получение китов без временого отсчета
 unlimited: false
 unlimitedPermission: unlimited.kits
+# Permission to edit kits
+# Право для модерирования китов
+adminPermission: admin.permission
 
 database:
   # The database type. "sqlite" and "mysql" are supported.
