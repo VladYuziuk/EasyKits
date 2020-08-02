@@ -1,0 +1,7 @@
+name: EasyKits
+main: vyuziuk\EasyKits\Main
+api: ["3.14.2"]
+version: "0.1"
+depend: ["aEasyForm"]
+author: vyuziuk4008
+website: vyuziuk.me
