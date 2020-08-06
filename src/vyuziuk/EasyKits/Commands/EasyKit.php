@@ -41,7 +41,11 @@ class EasyKit extends Command{
                 break;
             case "remove":
             case "delete":
-                KitManager::getInstance()->removeKit($args[0]);
+                if(!isset($args[1])){
+                    $sender->sendMessage(LanguageFactory::getLanguage()->translateString("command.usage"));
+                    return;
+                }
+                KitManager::getInstance()->removeKit($args[1]);
                 break;
         }
     }
